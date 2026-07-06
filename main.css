@@ -758,16 +758,23 @@ html, body {
     order: 1;
   }
 
-  .lang-menu {
-    min-width: 180px; /* خليها أعرض شوية */
-    width: max-content;
-    white-space: nowrap;
+  html[dir="rtl"] .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  /* اللوجو على اليمين */
+  html[dir="rtl"] .logo {
+    order: 3;
+  }
+
+  /* container بتاع اللغة والمنيو */
   html[dir="rtl"] .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
+    order: 1;
   }
 
   /* المنيو في أقصى الشمال */
@@ -776,14 +783,15 @@ html, body {
     margin-right: auto;
   }
 
-  /* اللغة بعده */
+  /* اللغة جنب المنيو */
   html[dir="rtl"] .lang-dropdown {
     order: 2;
   }
 
-  /* اللوجو في اليمين */
-  html[dir="rtl"] .logo {
-    order: 3;
+  .lang-menu {
+    min-width: 180px; /* خليها أعرض شوية */
+    width: max-content;
+    white-space: nowrap;
   }
 
   .hero-content h1 {
@@ -842,10 +850,23 @@ html, body {
     white-space: nowrap;
   }
 
+  html[dir="rtl"] .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* اللوجو على اليمين */
+  html[dir="rtl"] .logo {
+    order: 3;
+  }
+
+  /* container بتاع اللغة والمنيو */
   html[dir="rtl"] .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
+    order: 1;
   }
 
   /* المنيو في أقصى الشمال */
@@ -854,7 +875,7 @@ html, body {
     margin-right: auto;
   }
 
-  /* اللغة بعده */
+  /* اللغة جنب المنيو */
   html[dir="rtl"] .lang-dropdown {
     order: 2;
   }
