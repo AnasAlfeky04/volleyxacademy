@@ -764,6 +764,28 @@ html, body {
     white-space: nowrap;
   }
 
+  html[dir="rtl"] .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* المنيو في أقصى الشمال */
+  html[dir="rtl"] .menu-toggle {
+    order: 1;
+    margin-right: auto;
+  }
+
+  /* اللغة بعده */
+  html[dir="rtl"] .lang-dropdown {
+    order: 2;
+  }
+
+  /* اللوجو في اليمين */
+  html[dir="rtl"] .logo {
+    order: 3;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -818,6 +840,28 @@ html, body {
     min-width: 180px; /* خليها أعرض شوية */
     width: max-content;
     white-space: nowrap;
+  }
+
+  html[dir="rtl"] .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* المنيو في أقصى الشمال */
+  html[dir="rtl"] .menu-toggle {
+    order: 1;
+    margin-right: auto;
+  }
+
+  /* اللغة بعده */
+  html[dir="rtl"] .lang-dropdown {
+    order: 2;
+  }
+
+  /* اللوجو في اليمين */
+  html[dir="rtl"] .logo {
+    order: 3;
   }
 
   /* NAVBAR */
