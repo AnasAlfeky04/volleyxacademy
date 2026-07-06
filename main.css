@@ -957,18 +957,15 @@ html[dir="rtl"] .header-inner {
 
   html[dir="rtl"] .schedule-cta {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* تحت بعض */
+    align-items: center;
     gap: 10px;
-    justify-content: center;
-    text-align: center;
   }
 
   html[dir="rtl"] .schedule-cta .btn {
-    display: flex;
-    flex: 1;
-    min-width: 140px;
+    width: 100%;
+    max-width: 250px; /* نفس عرض زرار مبتدئ/كبار تقريبًا */
     text-align: center;
-    justify-content: center;
   }
 
   /* GALLERY */
