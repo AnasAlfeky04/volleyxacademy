@@ -964,6 +964,7 @@ html[dir="rtl"] .header-inner {
   }
 
   html[dir="rtl"] .schedule-cta .btn {
+    display: flex;
     flex: 1;
     min-width: 140px;
     text-align: center;
