@@ -844,26 +844,28 @@ html[dir="rtl"] .header-inner {
   html[dir="rtl"] .header-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
-  /* اللوجو يفضل في اليمين */
+  /* اللوجو في أقصى اليمين */
   html[dir="rtl"] .logo {
-    margin-left: auto;
+    order: 2;
   }
 
-  /* container بتاع المنيو واللغة */
+  /* container بتاع المنيو + اللغة */
   html[dir="rtl"] .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
+    order: 1;
   }
 
-  /* المنيو أقصى الشمال */
+  /* المنيو الأول (شمال) */
   html[dir="rtl"] .menu-toggle {
     order: 1;
   }
 
-  /* اللغة جنب المنيو */
+  /* اللغة بعده */
   html[dir="rtl"] .lang-dropdown {
     order: 2;
   }
