@@ -48,19 +48,18 @@ container.addEventListener("scroll", () => {
   ball.style.top = ballY + "px";
 });
 
-// Basic UI interactions: mobile menu, smooth scroll, tabs, form validation, gallery lightbox, year
+// Basic UI interactions
 document.addEventListener('DOMContentLoaded', () => {
 
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* -----------------------------------------------------------
-     MOBILE MENU (UPDATED)
+     MOBILE MENU
   ----------------------------------------------------------- */
   const menuToggle = document.getElementById('menu-toggle');
   const mainNav = document.getElementById('main-nav');
 
-  // Open / Close mobile menu
   menuToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.contains('open');
 
@@ -70,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-expanded', String(!isOpen));
   });
 
-  // Close menu when clicking any nav link
   document.querySelectorAll('#main-nav a').forEach(link => {
     link.addEventListener('click', () => {
       mainNav.classList.remove('open');
@@ -117,25 +115,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Videos
+  /* -----------------------------------------------------------
+     VIDEOS
+  ----------------------------------------------------------- */
   const vidThumbs = document.querySelectorAll('.video-thumb');
   vidThumbs.forEach(t => {
     const video = t.querySelector('video');
 
-    // Play on hover
     t.addEventListener('mouseenter', () => {
       video.currentTime = 0;
       video.play();
     });
 
-    // Stop + reset to thumbnail
     t.addEventListener('mouseleave', () => {
       video.pause();
       video.currentTime = 0;
-      video.load(); // restores poster
+      video.load();
     });
 
-    // Open full video in lightbox
     t.addEventListener('click', () => {
       const src = video.getAttribute('src');
       lbMedia.innerHTML = `<video src="${src}" autoplay muted controls playsinline></video>`;
@@ -144,4 +141,74 @@ document.addEventListener('DOMContentLoaded', () => {
       lbClose.focus();
     });
   });
+
+  /* ===========================================================
+     🌍 LANGUAGE DROPDOWN (UPDATED WITH TRANSLATION)
+  =========================================================== */
+
+  window.toggleLangMenu = function () {
+    const menu = document.getElementById("lang-menu");
+    const btn = document.querySelector(".lang-btn");
+
+    menu.classList.toggle("hidden");
+    btn.classList.toggle("active");
+  };
+
+  window.changeLang = function (lang) {
+
+    // 🔥 ترجمة النصوص
+    document.querySelectorAll("[data-en]").forEach(el => {
+      el.innerText = (lang === "ar")
+        ? el.getAttribute("data-ar")
+        : el.getAttribute("data-en");
+    });
+
+    // علامة الصح
+    document.querySelectorAll(".lang-item").forEach(item => {
+      item.classList.remove("active");
+      item.querySelector(".check").classList.add("hidden");
+    });
+
+    const selected = document.querySelector(`[onclick="changeLang('${lang}')"]`);
+    selected.classList.add("active");
+    selected.querySelector(".check").classList.remove("hidden");
+
+    // تغيير العلم
+    const flag = document.querySelector(".lang-btn img");
+    const text = document.querySelector(".lang-btn span");
+
+    if (lang === "ar") {
+      flag.src = "/images/flags/egypt.png";
+      text.innerText = "EG";
+      document.documentElement.dir = "rtl"; // 🔥 اتجاه عربي
+    } else {
+      flag.src = "/images/flags/usa.png";
+      text.innerText = "EN";
+      document.documentElement.dir = "ltr";
+    }
+
+    // قفل القائمة
+    document.getElementById("lang-menu").classList.add("hidden");
+    document.querySelector(".lang-btn").classList.remove("active");
+
+    // حفظ اللغة
+    localStorage.setItem("lang", lang);
+  };
+
+  // قفل القائمة لو ضغطت برا
+  document.addEventListener("click", function(e) {
+    const dropdown = document.querySelector(".lang-dropdown");
+    const menu = document.getElementById("lang-menu");
+    const btn = document.querySelector(".lang-btn");
+
+    if (!dropdown.contains(e.target)) {
+      menu.classList.add("hidden");
+      btn.classList.remove("active");
+    }
+  });
+
+  // تحميل اللغة المحفوظة
+  const savedLang = localStorage.getItem("lang") || "ar";
+  changeLang(savedLang);
+
 });

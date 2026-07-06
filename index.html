@@ -28,22 +28,47 @@
 
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#coaches">Coaches</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#photos">Photos</a></li>
-          <li><a href="#videos">Videos</a></li>
-          <li><a href="#opinion">Opinions</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="#programs" data-en="Programs" data-ar="أنظمة التدريب">Programs</a></li>
+          <li><a href="#coaches" data-en="Coaches" data-ar="المدربون">Coaches</a></li>
+          <li><a href="#schedule" data-en="Schedule" data-ar="المواعيد">Schedule</a></li>
+          <li><a href="#photos" data-en="Photos" data-ar="الصور">Photos</a></li>
+          <li><a href="#videos" data-en="Videos" data-ar="الفيديوهات">Videos</a></li>
+          <li><a href="#opinion" data-en="Opinions" data-ar="الآراء">Opinions</a></li>
+          <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
+          <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
         </ul>
       </nav>
 
-      
-
       <div class="header-actions">
-        <a href="#contact" class="btn btn-primary">Join Now</a>
+        <div class="lang-dropdown">
+          <!-- الزر الأساسي -->
+          <button class="lang-btn" onclick="toggleLangMenu()">
+            <img src="/images/flags/egypt.png" class="flag">
+            <span>EG</span>
+            <span class="arrow">▼</span>
+          </button>
+        
+          <!-- القائمة -->
+          <div id="lang-menu" class="lang-menu hidden">
+          
+            <!-- عربي -->
+            <div class="lang-item active" onclick="changeLang('ar')">
+              <img src="/images/flags/egypt.png" class="flag">
+              <span>العربية</span>
+              <span class="check">✔</span>
+            </div>
+          
+            <!-- English -->
+            <div class="lang-item" onclick="changeLang('en')">
+              <img src="/images/flags/usa.png" class="flag">
+              <span>English</span>
+              <span class="check hidden">✔</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary" data-en="Join Now" data-ar="إحجز مكانك دلوقتي">Join Now</a>
         <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
           <span class="hamburger"></span>
         </button>
@@ -56,18 +81,72 @@
     <section id="home" class="hero" role="region" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1>Train • Rise • Unleash</h1>
-          <p class="lead">VolleyX Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success.</p>
+          <h1 data-en="Train • Rise • Unleash" data-ar="تدرّب • تطوّر • انطلق">
+            Train • Rise • Unleash
+          </h1>
+          <p class="lead"
+          data-en="VolleyX Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success."
+          data-ar="أكاديمية VolleyX بتقدم تدريب احترافي على أعلى مستوى، ببرامج منظمة تناسب كل الأعمار والمستويات، وطريق واضح يوصّلك للمنافسة والاحتراف.">
+            VolleyX Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success.</p>
           <div class="hero-ctas">
-            <a href="#programs" class="btn btn-secondary">View Programs</a>
-            <a href="#contact" class="btn btn-primary">Book a Trial</a>
+            <a href="#programs" class="btn btn-secondary" data-en="View Programs" data-ar="عرض برامج التدريب">View Programs</a>
+            <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي">Book a Trial</a>
           </div>
-          <ul class="hero-features">
-            <li><strong>Dedicated coaches</strong> for each age group.</li>
-            <li><strong>Only Boys</strong> training groups.</li>
-            <li><strong>Flexible schedule</strong> & competitions prep.</li>
-            <!-- <li><strong>Female specialized trainer</strong> for female groups.</li> -->
+          <ul class="hero-features">     
+            
+            <li>
+              <strong 
+                data-en="Dedicated coaches" 
+                data-ar="مدربين متخصصين">
+                Dedicated coaches
+              </strong>
+              <span 
+                data-en=" for each age group." 
+                data-ar=" لكل فئة عمرية.">
+                for each age group.
+              </span>
+            </li>
+
+            <li>
+              <strong 
+                data-en="Separated groups" 
+                data-ar="مجموعات منفصلة">
+                Separated groups
+              </strong>
+              <span 
+                data-en=" for each gender." 
+                data-ar=" لكل فئة ( شباب / بنات ).">
+                for each gender.
+              </span>
+            </li>
+
+            <li>
+              <strong 
+                data-en="Female specialized trainer" 
+                data-ar="مدربة متخصصة">
+                Female specialized trainer
+              </strong>
+              <span 
+                data-en=" for female groups." 
+                data-ar=" لتدريب البنات.">
+                for female groups.
+              </span>
+            </li>
+
+            <li>
+              <strong 
+                data-en="Flexible schedule" 
+                data-ar="مواعيد مرنة">
+                Flexible schedule
+              </strong>
+              <span 
+                data-en=" & competitions prep." 
+                data-ar=" وتأهيل للمنافسات.">
+                & competitions prep.
+              </span>
+            </li>
           </ul>
+
         </div>
         <div class="hero-media" aria-hidden="true">
           <!-- Replace with actual image -->
@@ -81,18 +160,59 @@
     <section class="offers-banner">
       <div class="container offers-flex">
         <div class="offer-item">
-          <h3>🔥 Summer Offer</h3>
-          <p>Get <strong>20% OFF</strong> on your <strong>first 2 months!</strong></p>
+          <h3 data-en="🔥 Summer Offer" data-ar="🔥 عرض الصيف">
+            🔥 Summer Offer
+          </h3>
+          <p>
+            <span 
+              data-en="Get " 
+              data-ar="احصل على ">
+              Get 
+            </span>
+            <strong 
+              data-en="20% OFF" 
+              data-ar="خصم 20%">
+              20% OFF
+            </strong>
+            <span 
+              data-en=" on your " 
+              data-ar=" على ">
+              on your 
+            </span>
+            <strong 
+              data-en="first 2 months!" 
+              data-ar="أول شهرين!">
+              first 2 months!
+            </strong>
+          </p>
         </div>
       
         <div class="offer-item">
-          <h3>🏅 Free Game</h3>
-          <p>One free Friday game every month.</p>
+          <h3 data-en="🏅 Friendly Match" data-ar="🏅 مباريات ودية">🏅 Friendly Matchs</h3>
+          <p data-en="One Friday Open Play Session per month." data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+            One Friday Open Play Session per month.
+          </p>
         </div>
       
         <div class="offer-item">
-          <h3>💥 Trial Discount</h3>
-          <p>Trial session now for only <strong class="custom1">EGP 100</strong>.</p>
+          <h3 data-en="💥 Trial Discount" data-ar="💥 خصم على الحصة التجربة">💥 Trial Discount</h3>
+          <p>
+            <span 
+              data-en="Trial session now for only " 
+              data-ar=" جرّب دلوقتي بسعر">
+              Trial session now for only  
+            </span>
+            <strong 
+              data-en="EGP 100" 
+              data-ar="100 جم">
+              EGP 100
+            </strong>
+            <span 
+              data-en="only." 
+              data-ar=" فقط.">
+              only
+            </span>
+          </p>
         </div>
       </div>
     </section>
@@ -101,27 +221,45 @@
 
     <!-- PROGRAMS -->
     <section id="programs" class="section programs container" aria-labelledby="programs-title">
-      <h2 id="programs-title">Programs</h2>
-      <p class="section-sub">Programs built for progression — from first touch to competitive play.</p>
+      <h2 id="programs-title" data-en="Programs" data-ar="أنظمة التدريب">Programs</h2>
+      <p class="section-sub"
+      data-en="Programs built for progression — from first touch to competitive play."
+      data-ar="برامج مصممة لتطوير مستواك — من أول لمسة لحد الاحتراف والمنافسة">
+        Programs built for progression — from first touch to competitive play.
+      </p>
       <div class="cards-grid">
 
         <article class="card">
-          <h3>Junior Performance ( 9 - 18 )</h3>
-          <p>Technique, game-sense, strength & conditioning, and tournament preparation.</p>
+          <h3 data-en="Junior Performance ( 9 - 18 )" data-ar="برنامج الناشئين ( 9 - 18 سنة )">Junior Performance ( 9 - 18 )</h3>
+          <p
+          data-en="Technique, game-sense, strength & conditioning, and tournament preparation."
+          data-ar="تطوير المهارات، فهم اللعب، اللياقة البدنية، والاستعداد للبطولات">
+          Technique, game-sense, strength & conditioning, and tournament preparation.</p>
           <ul>
-            <li>90 - minute sessions</li>
-            <li>Advanced technique</li>
-            <li>1 Free Game per month</li>
+            <li data-en="90 - minute sessions" data-ar="90 دقيقة تدريب">90 - minute sessions</li>
+            <li data-en="Advanced techniques" data-ar="تقنيات متطورة">Advanced techniques</li>
+            <li
+            data-en="One Friday Open Play Session per month."
+            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+            One Friday Open Play Session per month.
+            </li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Senior Performance ( +18 )</h3>
-          <p>Skill sharpening, tactical sessions and league-ready training for senior players.</p>
+          <h3 data-en="Senior Performance ( +18 )" data-ar="برنامج الكبار ( +18 سنة )">Senior Performance ( +18 )</h3>
+          <p
+          data-en="Skill sharpening, tactical sessions and league-ready training for senior players."
+          data-ar="تطوير المهارات، تدريبات تكتيكية، وإعداد للمنافسات الرسمية للاعبين الكبار.">
+          Skill sharpening, tactical sessions and league-ready training for senior players.</p>
           <ul>
-            <li>120 - minute sessions</li>
-            <li>Team training sessions</li>
-            <li>1 Free Game per month</li>
+            <li data-en="120 - minute sessions" data-ar="120 دقيقة تدريب">120 - minute sessions</li>
+            <li data-en="Team training sessions" data-ar="تدريبات جماعية كفريق">Team training sessions</li>
+            <li
+            data-en="One Friday Open Play Session per month."
+            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+            One Friday Open Play Session per month.
+            </li>
           </ul>
         </article>
       </div>
@@ -130,30 +268,34 @@
     <!-- COACHES -->
     <section id="coaches" class="section coaches" aria-labelledby="coaches-title">
       <div class="container">
-        <h2 id="coaches-title">Coaches</h2>
-        <p class="section-sub">Experienced coaches with competitive and coaching credentials.</p>
+        <h2 id="coaches-title" data-en="Coaches" data-ar="المدربون">Coaches</h2>
+        <p class="section-sub"
+        data-en="Experienced coaches with competitive and coaching credentials."
+        data-ar="مدربون ذوو خبرة وخلفيات تنافسية وشهادات تدريبية.">
+        Experienced coaches with competitive and coaching credentials.
+        </p>
         <div class="coaches-grid">
           <figure class="coach">
             <img src="/images/Coaches/avatar.png" alt="Coach Ahmed — Head Coach" loading="lazy">
             <figcaption>
-              <h3>Coach Anas</h3>
-              <p>Head Coach — Academy Founder.</p>
+              <h3 data-en="Coach Anas" data-ar="كابتن أنس">Coach Anas</h3>
+              <p data-en="Head Coach — Academy Founder." data-ar="المدير الفني — مؤسس الأكاديمية.">Head Coach — Academy Founder.</p>
             </figcaption>
           </figure>
 
           <figure class="coach">
             <img src="/images/Coaches/avatar.png" alt="Coach Fouad" loading="lazy">
             <figcaption>
-              <h3>Coach Fouad</h3>
-              <p>Coach — Junior Coach.</p>
+              <h3 data-en="Coach Fouad" data-ar="كابتن فؤاد">Coach Fouad</h3>
+              <p data-en="Coach — Junior Coach." data-ar="مدرب — مدرب ناشئين.">Coach — Junior Coach.</p>
             </figcaption>
           </figure>
 
           <figure class="coach">
             <img src="/images/Coaches/avatar.png" alt="Coach Ahmed" loading="lazy">
             <figcaption>
-              <h3>Coach Ahmed</h3>
-              <p>Coach — Senior Coach.</p>
+              <h3 data-en="Coach Ahmed" data-ar="كابتن أحمد">Coach Ahmed</h3>
+              <p data-en="Coach — Senior Coach." data-ar="مدرب — مدرب فريق الكبار.">Coach — Senior Coach.</p>
             </figcaption>
           </figure>
         </div>
@@ -163,42 +305,117 @@
     <!-- SCHEDULE -->
     <section id="schedule" class="section schedule" aria-labelledby="schedule-title">
       <div class="container">
-        <h2 id="schedule-title">Weekly Schedule</h2>
-        <p class="section-sub">Choose your level and see available sessions.</p>
+        <h2 id="schedule-title" data-en="Weekly Schedule" data-ar="المواعيد الإسبوعية">Weekly Schedule</h2>
+        <p class="section-sub"
+        data-en="Choose your level and see available sessions."
+        data-ar="اختر مستواك واطّلع على المواعيد المتاحة.">
+        Choose your level and see available sessions.
+        </p>
 
         <div class="schedule-controls" role="tablist" aria-label="Program schedule">
-          <button class="tab-btn active" data-target="junior" role="tab" aria-selected="true">Junior & Senior</button>
-          <!-- <button class="tab-btn" data-target="youth" role="tab" aria-selected="false">Senior</button> -->
+          <button class="tab-btn active" data-target="junior" role="tab" aria-selected="true" data-en="Junior" data-ar="مبتدئ">Junior</button>
+          <button class="tab-btn" data-target="youth" role="tab" aria-selected="false" data-en="Junior" data-ar="كبار">Senior</button>
         </div>
 
         <div class="schedule-panels">
           <div id="junior" class="panel">
             <ul>
-              <li><strong>Mon</strong> — 07:00 PM - 09:00 PM</li>
-              <li><strong>Thur</strong> — 07:00 PM - 09:00 PM</li>
-              <li><strong>Fri</strong> — 06:00 PM - 08:00 PM — Fun-Matches</li>
+              <li>
+                <strong 
+                  data-en="Mon" 
+                  data-ar="الإثنين">
+                  Mon
+                </strong>
+                <span 
+                  data-en=" — 07:00 PM - 09:00 PM" 
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  — 07:00 PM - 09:00 PM
+                </span>
+              </li>
+
+              <li>
+                <strong 
+                  data-en="Thur" 
+                  data-ar="الخميس">
+                  Thur
+                </strong>
+                <span 
+                  data-en=" — 07:00 PM - 09:00 PM" 
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  — 07:00 PM - 09:00 PM
+                </span>
+              </li>
+
+              <li>
+                <strong 
+                  data-en="Fri" 
+                  data-ar="الجمعة">
+                  Fri
+                </strong>
+                <span 
+                  data-en=" — 06:00 PM - 08:00 PM — Open Play Session" 
+                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح">
+                  — 06:00 PM - 08:00 PM — Open Play Session
+                </span>
+              </li>
             </ul>
           </div>
 
-          <!-- <div id="youth" class="panel hidden">
+          <div id="youth" class="panel hidden">
             <ul>
-              <li><strong>Tue & Fri</strong> — 07:00 pm - 09:00 pm</li>
-              <li><strong>Fri</strong> — Fun-Game</li>
+              <li>
+                <strong 
+                  data-en="Sun" 
+                  data-ar="الأحد">
+                  Sun
+                </strong>
+                <span 
+                  data-en=" — 07:00 PM - 09:00 PM" 
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  — 07:00 PM - 09:00 PM
+                </span>
+              </li>
+
+              <li>
+                <strong 
+                  data-en="Wed" 
+                  data-ar="الأربعاء">
+                  Wed
+                </strong>
+                <span 
+                  data-en=" — 07:00 PM - 09:00 PM" 
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  — 07:00 PM - 09:00 PM
+                </span>
+              </li>
+
+              <li>
+                <strong 
+                  data-en="Fri" 
+                  data-ar="الجمعة">
+                  Fri
+                </strong>
+                <span 
+                  data-en=" — 06:00 PM - 08:00 PM — Open Play Session" 
+                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح">
+                  — 06:00 PM - 08:00 PM — Open Play Session
+                </span>
+              </li>
             </ul>
-          </div> -->
+          </div>
         </div>
 
         <div class="schedule-cta">
-          <a href="#contact" class="btn btn-primary">Book a Trial</a>
-          <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+          <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي">Book a Trial</a>
+          <a href="#pricing" class="btn btn-secondary" data-en="View Pricing" data-ar="عرض الأسعار">View Pricing</a>
         </div>
       </div>
     </section>
 
     <!-- PHOTOS -->
     <section id="photos" class="section gallery container" aria-labelledby="photos-title">
-      <h2 id="photos-title">Photos</h2>
-      <p class="section-sub">Moments from training and matches.</p>
+      <h2 id="photos-title" data-en="Photos" data-ar="الصور">Photos</h2>
+      <p class="section-sub" data-en="Moments from training and matches." data-ar="لقطات من التدريبات والمباريات.">Moments from training and matches.</p>
       <div class="gallery-grid">
 
         <button class="img-thumb" data-src="/images/Gallary/Photos/Ammar.jpg" aria-label="Training drill">
@@ -231,8 +448,8 @@
 
     <!-- VIDEOS -->
     <section id="videos" class="section gallery container" aria-labelledby="videos-title">
-      <h2 id="videos-title">Videos</h2>
-      <p class="section-sub">Moments from training and matches.</p>
+      <h2 id="videos-title" data-en="Videos" data-ar="الفيديوهات">Videos</h2>
+      <p class="section-sub" data-en="Moments from training and matches." data-ar="لقطات من التدريبات والمباريات.">Moments from training and matches.</p>
       <div class="gallery-grid">
 
         <!-- <button class="video-thumb" data-src="/images/Gallary/Videos/Vid-01.mp4" aria-label="Video 1">
@@ -258,16 +475,28 @@
     <!-- TESTIMONIALS -->
     <section id="opinion" class="section testimonials" aria-labelledby="testimonials-title">
       <div class="container">
-        <h2 id="testimonials-title">What parents & players say</h2>
+        <h2 id="testimonials-title"
+        data-en="What parents & players say"
+        data-ar="آراء اللاعبين وأولياء الأمور">
+        What parents & players say
+        </h2>
         <div class="testimonial-grid">
           <blockquote class="blockquote">
-            <p>"Coach Anas transformed my son's technique in 1 month. The coaches are patient and professional."</p>
-            <footer class="talker">Fatima, parent</footer>
+            <p
+            data-en="Coach Fouad transformed my son's technique in 1 month."
+            data-ar="كابتن فؤاد طور مهارات ابني بشكل ملحوظ جدا خلال شهر واحد فقط.">
+            Coach Fouad transformed my son's technique in 1 month.
+            </p>
+            <footer class="talker" data-en="Fatma, parent" data-ar="فاطمة، وليّة أمر">Fatma, parent</footer>
           </blockquote>
 
           <blockquote class="blockquote">
-            <p>"Great facility and structured sessions. I have improved my defending and serving control."</p>
-            <footer class="talker">Omar, player</footer>
+            <p
+            data-en="Great facility and structured sessions. I have improved my defending and serving control."
+            data-ar="ملاعب مميزة وتدريبات منظمة. طوّرت مستواي في الإستقبال والتحكم في الإرسال.">
+            "Great facility and structured sessions. I have improved my defending and serving control."
+            </p>
+            <footer class="talker" data-en="Omar, player" data-ar="عمر، لاعب">Omar, player</footer>
           </blockquote>
         </div>
       </div>
@@ -275,37 +504,49 @@
 
     <!-- PRICING -->
     <section id="pricing" class="section pricing container" aria-labelledby="pricing-title">
-      <h2 id="pricing-title">Pricing</h2>
-      <p class="section-sub">Simple and transparent pricing.</p>
+      <h2 id="pricing-title" data-en="Pricing" data-ar="الأسعار">Pricing</h2>
+      <p class="section-sub" data-en="Simple and transparent pricing." data-ar="أسعار بسيطة وواضحة">Simple and transparent pricing.</p>
       <div class="pricing-grid">
         <div class="price-card recommended">
-          <h3>Trial Session</h3>
+          <h3 data-en="Trial Session" data-ar="تمرينة تجريبية">Trial Session</h3>
           <p class="price">
-            <span class="new-price">EGP 100</span>
+            <span class="new-price" data-en="EGP 100" data-ar="100 جم">EGP 100</span>
             <!-- <span class="old-price">EGP 125</span> -->
           </p>
-          <p>One trial training to assess level and fit.</p>
-          <a class="btn btn-primary" href="#contact">Book Trial</a>
+          <p
+          data-en="One trial training to assess level and fit."
+          data-ar="تمرينة تجريبية واحدة لتقييم المستوى">
+          One trial training to assess level and fit.
+          </p>
+          <a class="btn btn-primary" href="#contact" data-en="Book Trial" data-ar="احجز تجربتك دلوقتي">Book Trial</a>
         </div>
 
         <div class="price-card recommended">
-          <h3>Monthly Plan</h3>
+          <h3 data-en="Monthly Plan" data-ar="الإشتراك الشهري">Monthly Plan</h3>
           <p class="price">
-            <span class="new-price">EGP 800 / month</span>
+            <span class="new-price" data-en="EGP 800 / month" data-ar="800 جم / شهر">EGP 800 / month</span>
             <!-- <span class="old-price">EGP 1000</span> -->
           </p>
-          <p>2 sessions per week + Free game.</p>
-          <a class="btn btn-primary" href="#contact">Sign Up</a>
+          <p
+          data-en="2 sessions per week + Open Play Session"
+          data-ar="2 تمرينة خلال الإسبوع + حجز لعب مفتوح">
+          2 sessions per week + Free game.
+          </p>
+          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا">Sign Up</a>
         </div>
 
         <div class="price-card recommended">
-          <h3>Yearly Plan</h3>
+          <h3 data-en="Yearly Plan" data-ar="الإشتراك السنوي">Yearly Plan</h3>
           <p class="price">
-            <span class="new-price">EGP 8500 / year</span>
-            <span class="old-price">EGP 9600</span>
+            <span class="new-price" data-en="EGP 8500 / year" data-ar="8500 جم / سنة">EGP 8500 / year</span>
+            <span class="old-price" data-en="EGP 9600" data-ar="9600 جم">EGP 9600</span>
           </p>
-          <p>2 sessions per week + 2 Free games.</p>
-          <a class="btn btn-primary" href="#contact">Sign Up</a>
+          <p
+          data-en="2 sessions per week + Open Play Session"
+          data-ar="2 تمرينة خلال الإسبوع + حجز لعب مفتوح">
+          2 sessions per week + Free game.
+          </p>
+          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا">Sign Up</a>
         </div>
       </div>
     </section>
@@ -313,9 +554,9 @@
     <!-- CONTACT -->
     <section id="contact" class="cta">
       <div class="contact-info">
-        <h2>Ready to Start Your Journey?</h2>
-        <p>Message us now to reserve your spot.</p>
-        <a href="https://wa.me/+201147145691" target="_blank">Contact Us</a>
+        <h2 data-en="Ready to Start Your Journey with us?" data-ar="هل أنت مستعد لبدء رحلتك معنا؟">Ready to Start Your Journey?</h2>
+        <p data-en="Message us now to reserve your spot." data-ar="ابعتلنا دلوقتي لحجز مكانك.">Message us now to reserve your spot.</p>
+        <a href="https://wa.me/+201147145691" target="_blank" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
       </div>
 
       <div class="contact-location">
@@ -336,7 +577,12 @@
   </div>
 
   <div class="footer-col center">
-    <p>© <span id="year"></span> VolleyX Academy. All rights reserved.</p>
+    <p>© <span id="year"></span>
+      <span data-en="VolleyX Academy. All rights reserved."
+        data-ar="أكاديمية VolleyX. جميع الحقوق محفوظة.">
+        VolleyX Academy. All rights reserved.
+      </span>
+    </p>
   </div>
 
   <div class="footer-col center">

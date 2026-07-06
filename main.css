@@ -56,7 +56,7 @@ body::before {
 .scroll-track {
   position: fixed;
   top: 0;
-  right: 1px;
+  right: 3px;
   width: 40px;
   height: 100vh;
   z-index: 9999;
@@ -88,6 +88,11 @@ body::before {
 
 .space {
   white-space: pre;
+}
+
+html[dir="rtl"] .scroll-track {
+  right: auto;
+  left: 3px;
 }
 
 /* ---------- GLOBAL ELEMENTS ---------- */
@@ -166,6 +171,7 @@ h1, h2, h3, h4 {
 
 .logo {
     width: 150px;
+    margin-top: 7px;
 }
 
 .main-nav ul {
@@ -184,6 +190,122 @@ h1, h2, h3, h4 {
 }
 .main-nav a:hover {
   color: var(--primary);
+}
+
+/* =============================
+   🌍 Language Dropdown - PRO UI
+   ============================= */
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  top: 7px;
+}
+
+/* الزر الأساسي */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 30px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.lang-btn:hover {
+  background: #f7f7f7;
+  transform: translateY(-1px);
+}
+
+/* العلم كورة */
+.flag {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* السهم */
+.arrow {
+  font-size: 10px;
+  margin-left: 2px;
+  transition: 0.3s;
+}
+
+/* دوران السهم لما تفتح */
+.lang-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* القائمة */
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 180px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+  z-index: 999;
+}
+
+/* animation ناعمة */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* عنصر اللغة */
+.lang-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.lang-item:hover {
+  background: #f5f5f5;
+}
+
+/* الجزء الشمال (علم + اسم) */
+.lang-item span:first-of-type {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* علامة الصح */
+.check {
+  color: #00c853;
+  font-size: 14px;
+}
+
+/* اللغة المختارة */
+.lang-item.active {
+  background: #f0f8ff;
+  font-weight: 600;
+}
+
+/* إخفاء */
+.hidden {
+  display: none;
 }
 
 /* Mobile menu */
@@ -505,6 +627,14 @@ h1, h2, h3, h4 {
   height: 280px;
   border-radius: 15px;
   overflow: hidden;
+}
+
+html[dir="rtl"] .lang-dropdown {
+  padding-left: 70px;
+}
+
+html[dir="rtl"] .cta .contact-info {
+  text-align: right;
 }
 
 /* Mobile responsive */
