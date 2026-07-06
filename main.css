@@ -758,6 +758,14 @@ html, body {
   .social-icons {
     gap: 25px;
   }
+
+  .scroll-track {
+    display: none;
+  }
+
+  .header-actions .btn-primary {
+    display: none;
+  }
 }
 
 
@@ -869,12 +877,11 @@ html, body {
     flex-wrap: wrap;
   }
 
-  /* SCROLL BALL */
   .scroll-track {
-    width: 30px;
+    display: none;
   }
 
-  .scroll-ball {
-    width: 35px;
+  .header-actions .btn-primary {
+    display: none;
   }
 }
