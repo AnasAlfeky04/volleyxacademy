@@ -758,19 +758,29 @@ html, body {
     order: 1;
   }
 
+html[dir="rtl"] .header-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  /* اللوجو يفضل في اليمين */
+  html[dir="rtl"] .logo {
+    margin-left: auto;
+  }
+
+  /* container بتاع المنيو واللغة */
   html[dir="rtl"] .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
-  /* زرار المنيو في أقصى الشمال */
+  /* المنيو أقصى الشمال */
   html[dir="rtl"] .menu-toggle {
     order: 1;
-    margin-right: auto;
   }
 
-  /* اللغة بعده */
+  /* اللغة جنب المنيو */
   html[dir="rtl"] .lang-dropdown {
     order: 2;
   }
@@ -831,19 +841,29 @@ html, body {
     order: 1;
   }
 
+  html[dir="rtl"] .header-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  /* اللوجو يفضل في اليمين */
+  html[dir="rtl"] .logo {
+    margin-left: auto;
+  }
+
+  /* container بتاع المنيو واللغة */
   html[dir="rtl"] .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
   }
 
-  /* زرار المنيو في أقصى الشمال */
+  /* المنيو أقصى الشمال */
   html[dir="rtl"] .menu-toggle {
     order: 1;
-    margin-right: auto;
   }
 
-  /* اللغة بعده */
+  /* اللغة جنب المنيو */
   html[dir="rtl"] .lang-dropdown {
     order: 2;
   }
