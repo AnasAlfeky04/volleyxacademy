@@ -11,7 +11,18 @@ function updateLimits() {
   maxBallY = track.clientHeight - ball.clientHeight;
 }
 updateLimits();
-window.addEventListener("resize", updateLimits);
+window.addEventListener("resize", () => {
+  updateLimits();
+  checkScrollVisibility();
+});
+
+function checkScrollVisibility() {
+  const hasScroll = container.scrollHeight - container.clientHeight > 5;
+
+  track.style.display = hasScroll ? "flex" : "none";
+}
+
+container.addEventListener("scroll", checkScrollVisibility);
 
 /* --- سحب الكرة --- */
 ball.addEventListener("mousedown", (e) => {
@@ -47,6 +58,62 @@ container.addEventListener("scroll", () => {
   const ballY = scrollPercent * maxBallY;
   ball.style.top = ballY + "px";
 });
+
+fetch('photos.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const images = doc.querySelectorAll('.gallery-grid img');
+
+    const container = document.getElementById('home-photos');
+
+    images.forEach((img, index) => {
+      if (index < 3) {
+        const btn = document.createElement('button');
+        btn.className = 'img-thumb';
+
+        btn.innerHTML = `<img src="${img.src}" alt="">`;
+        container.appendChild(btn);
+      }
+    });
+  });
+
+  fetch('videos.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    const videos = doc.querySelectorAll('.gallery-grid video');
+    const container = document.getElementById('home-videos');
+
+    container.innerHTML = "";
+
+    videos.forEach((video, index) => {
+      if (index < 3) {
+
+        const src = video.getAttribute("src");
+        const poster = video.getAttribute("poster");
+
+        const btn = document.createElement('button');
+        btn.className = 'video-thumb';
+
+        // 🔥 نفس العنصر بالظبط
+        btn.innerHTML = `
+          <video 
+            src="${src}" 
+            poster="${poster}" 
+            muted 
+            playsinline
+          ></video>
+        `;
+
+        container.appendChild(btn);
+      }
+    });
+  });
 
 // Basic UI interactions
 document.addEventListener('DOMContentLoaded', () => {
@@ -118,29 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
   /* -----------------------------------------------------------
      VIDEOS
   ----------------------------------------------------------- */
-  const vidThumbs = document.querySelectorAll('.video-thumb');
-  vidThumbs.forEach(t => {
-    const video = t.querySelector('video');
+document.addEventListener("mouseover", (e) => {
+  const thumb = e.target.closest(".video-thumb");
+  if (!thumb) return;
 
-    t.addEventListener('mouseenter', () => {
-      video.currentTime = 0;
-      video.play();
-    });
+  const video = thumb.querySelector("video");
+  if (!video) return;
 
-    t.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0;
-      video.load();
-    });
+  video.currentTime = 0;
+  video.muted = false; // تشغيل الصوت
+  video.play();
+});
 
-    t.addEventListener('click', () => {
-      const src = video.getAttribute('src');
-      lbMedia.innerHTML = `<video src="${src}" autoplay muted controls playsinline></video>`;
-      lightbox.classList.remove('hidden');
-      lightbox.setAttribute('aria-hidden','false');
-      lbClose.focus();
-    });
-  });
+document.addEventListener("mouseout", (e) => {
+  const thumb = e.target.closest(".video-thumb");
+  if (!thumb) return;
+
+  const video = thumb.querySelector("video");
+  if (!video) return;
+
+  video.pause();
+  video.currentTime = 0;
+  video.load(); // 🔥 يرجّع الـ thumbnail
+});
+
+
 
   /* ===========================================================
      🌍 LANGUAGE DROPDOWN (UPDATED WITH TRANSLATION)

@@ -1,9 +1,4 @@
-/* =============================
-   VOLLEYX ACADEMY — PROFESSIONAL MODERN CSS
-   Clean, modern, responsive design
-   ============================= */
 
-/* ---------- CSS VARIABLES ---------- */
 :root {
   --primary: #00A6F9;
   --primary-dark: #0092dc;
@@ -430,33 +425,6 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.arrow-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #00A6F9;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  opacity: 0.9;
-}
-
-.arrow-left {
-  left: -10px;
-}
-
-.arrow-right {
-  right: -10px;
-}
-
-.arrow-btn:hover {
-  opacity: 1;
-}
-
 /* ---------- CARDS GRID ---------- */
 .cards-grid, .coaches-grid, .pricing-grid, .testimonial-grid, .gallery-grid {
   display: grid;
@@ -536,14 +504,55 @@ h1, h2, h3, h4 {
 }
 
 /* ---------- GALLERY ---------- */
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 18px;
+  border-radius: 30px;
+
+  background: transparent;
+  border: 2px solid #00A6F9;
+  color: #00A6F9;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.see-all:hover {
+  background: #00A6F9;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,166,249,0.3);
+}
+
 .img-thumb img {
   width: 100%;
   border-radius: var(--radius);
   cursor: pointer;
   transition: var(--transition);
+
 }
 .img-thumb img:hover {
   transform: scale(1.05);
+}
+
+.img-thumb {
+    background: transparent;
+    padding-top: 20px;
+    border-color: transparent;
 }
 
 .video-thumb {
@@ -915,27 +924,16 @@ html[dir="rtl"] .header-inner {
   }
 
   /* SCHEDULE */
-  /* html[dir="rtl"] .schedule-controls {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  html[dir="rtl"] .schedule-controls .tab-btn {
-    flex: 1;
-    text-align: center;
-  } */
-
   html[dir="rtl"] .schedule-cta {
     display: flex;
-    flex-direction: column; /* تحت بعض */
+    flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
   html[dir="rtl"] .schedule-cta .btn {
     width: 100%;
-    max-width: 250px; /* نفس عرض زرار مبتدئ/كبار تقريبًا */
+    max-width: 250px;
     text-align: center;
   }
 
