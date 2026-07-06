@@ -859,11 +859,6 @@ html, body {
     order: 2;
   }
 
-  /* اللوجو في اليمين */
-  html[dir="rtl"] .logo {
-    order: 3;
-  }
-
   /* NAVBAR */
   .main-nav {
     position: absolute;
