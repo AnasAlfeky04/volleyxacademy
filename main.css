@@ -758,6 +758,12 @@ html, body {
     order: 1;
   }
 
+  html[dir="ltr"] .lang-menu {
+    right: 0;
+    left: auto;
+    transform: translateX(-20px); /* يخشها جوه الشاشة */
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -808,6 +814,12 @@ html, body {
     order: 1;
   }
 
+  html[dir="ltr"] .lang-menu {
+    right: 0;
+    left: auto;
+    transform: translateX(-20px); /* يخشها جوه الشاشة */
+  }
+
   /* NAVBAR */
   .main-nav {
     position: absolute;
@@ -837,6 +849,10 @@ html, body {
 
   .logo {
     width: 110px;
+  }
+
+  .rise{
+    font-size: large;
   }
 
   /* خلي زرار يظهر */
