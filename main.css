@@ -915,16 +915,16 @@ html[dir="rtl"] .header-inner {
   }
 
   /* SCHEDULE */
-  html[dir="rtl"] .schedule-controls {
+  /* html[dir="rtl"] .schedule-controls {
     display: flex;
-    flex-direction: row; /* جنب بعض */
+    flex-direction: row;
     gap: 10px;
   }
 
   html[dir="rtl"] .schedule-controls .tab-btn {
-    flex: 1; /* كل زرار ياخد نص المساحة */
+    flex: 1;
     text-align: center;
-  }
+  } */
 
   html[dir="rtl"] .schedule-cta {
     display: flex;
