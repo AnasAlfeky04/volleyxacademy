@@ -764,6 +764,11 @@ html, body {
     white-space: nowrap;
   }
 
+  .rise {
+    font-size: 2rem; /* صغّرها شوية */
+    line-height: 1.3;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -851,8 +856,9 @@ html, body {
     width: 110px;
   }
 
-  .rise{
-    font-size: large;
+  .rise {
+    font-size: 2rem; /* صغّرها شوية */
+    line-height: 1.3;
   }
 
   /* خلي زرار يظهر */
