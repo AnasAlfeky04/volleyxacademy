@@ -820,6 +820,18 @@ html, body {
     transform: translateX(-20px); /* يخشها جوه الشاشة */
   }
 
+  .lang-menu {
+  position: absolute;
+  top: 110%;
+  z-index: 9999;
+}
+
+/* مهم جدًا */
+.header,
+.header-inner {
+  overflow: visible !important;
+}
+
   /* NAVBAR */
   .main-nav {
     position: absolute;
