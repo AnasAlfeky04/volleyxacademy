@@ -764,6 +764,12 @@ html, body {
     transform: translateX(-20px); /* يخشها جوه الشاشة */
   }
 
+  .lang-menu {
+    min-width: 180px; /* خليها أعرض شوية */
+    width: max-content;
+    white-space: nowrap;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
@@ -821,16 +827,10 @@ html, body {
   }
 
   .lang-menu {
-  position: absolute;
-  top: 110%;
-  z-index: 9999;
-}
-
-/* مهم جدًا */
-.header,
-.header-inner {
-  overflow: visible !important;
-}
+    min-width: 180px; /* خليها أعرض شوية */
+    width: max-content;
+    white-space: nowrap;
+  }
 
   /* NAVBAR */
   .main-nav {
