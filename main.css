@@ -955,6 +955,19 @@ html[dir="rtl"] .header-inner {
     flex-direction: column;
   }
 
+  html[dir="rtl"] .schedule-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  html[dir="rtl"] .schedule-cta .btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+  }
+
   /* GALLERY */
   .gallery-grid {
     display: flex;
