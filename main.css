@@ -758,12 +758,6 @@ html, body {
     order: 1;
   }
 
-  html[dir="ltr"] .lang-menu {
-    right: 0;
-    left: auto;
-    transform: translateX(-20px); /* يخشها جوه الشاشة */
-  }
-
   .lang-menu {
     min-width: 180px; /* خليها أعرض شوية */
     width: max-content;
@@ -818,12 +812,6 @@ html, body {
   /* اللغة قبله */
   html[dir="ltr"] .lang-dropdown {
     order: 1;
-  }
-
-  html[dir="ltr"] .lang-menu {
-    right: 0;
-    left: auto;
-    transform: translateX(-20px); /* يخشها جوه الشاشة */
   }
 
   .lang-menu {
