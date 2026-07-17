@@ -44,3 +44,57 @@ html[dir="rtl"] .section-sub {
     overflow: hidden;
     border-radius: 12px;
 }
+
+@media (max-width: 768px) {
+
+  /* =========================
+     📸 الصفحة العادية (صورة واحدة)
+  ========================= */
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-grid .img-thumb {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* نخفي باقي الصور */
+  .gallery-grid .img-thumb:not(:first-child) {
+    display: none;
+  }
+
+  /* الصورة مربعة 1:1 بدون قص */
+  .img-thumb img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #000;
+  }
+
+  /* الفيديو */
+  .video-thumb {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* =========================
+     📸 صفحة See All (كل الصور)
+  ========================= */
+  .see-all-page .gallery-grid {
+    flex-direction: column;
+  }
+
+  .see-all-page .gallery-grid .img-thumb {
+    display: block !important;
+  }
+
+  .see-all-page .img-thumb img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+
+}
