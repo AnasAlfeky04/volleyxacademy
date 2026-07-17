@@ -714,6 +714,10 @@ html[dir="rtl"] .cta .contact-info {
 ======================================== */
 @media (max-width: 1024px) {
 
+  .scroll-track {
+    display: none !important;
+  }
+
   html[dir="ltr"] .header-actions {
     display: flex;
     align-items: center;
@@ -796,6 +800,10 @@ html[dir="rtl"] .header-inner {
    📱 MOBILE (<=768px)
 ======================================== */
 @media (max-width: 768px) {
+
+  .scroll-track {
+    display: none !important;
+  }
 
   html[dir="ltr"] .header-actions {
     display: flex;
@@ -936,9 +944,6 @@ html[dir="rtl"] .header-inner {
     max-width: 250px;
     text-align: center;
   }
-
-  /* GALLERY */
-
 
   /* CTA */
   .cta {
