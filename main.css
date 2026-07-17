@@ -793,6 +793,15 @@ html[dir="rtl"] .header-inner {
   .header-actions .btn-primary {
     display: none;
   }
+
+  #home-photos > * {
+    display: none;
+  }
+
+  /* أول صورة بس */
+  #home-photos > *:first-child {
+    display: block;
+  }
 }
 
 
@@ -943,6 +952,15 @@ html[dir="rtl"] .header-inner {
     width: 100%;
     max-width: 250px;
     text-align: center;
+  }
+
+  #home-photos > * {
+    display: none;
+  }
+
+  /* أول صورة بس */
+  #home-photos > *:first-child {
+    display: block;
   }
 
   /* CTA */
