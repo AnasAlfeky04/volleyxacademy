@@ -969,11 +969,7 @@ html[dir="rtl"] .header-inner {
     object-fit: contain;
   }
 
-  .gallery-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
+  
 
   /* CTA */
   .cta {
