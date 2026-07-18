@@ -54,4 +54,14 @@ html[dir="rtl"] .section-sub {
         object-fit: contain;
     }
 
+    .section-sub {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    html[dir="rtl"] .section-sub {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
 }
