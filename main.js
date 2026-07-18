@@ -209,6 +209,27 @@ document.addEventListener("mouseout", (e) => {
   video.load(); // 🔥 يرجّع الـ thumbnail
 });
 
+document.addEventListener("click", (e) => {
+  const thumb = e.target.closest(".video-thumb");
+  if (!thumb) return;
+
+  const video = thumb.querySelector("video");
+  if (!video) return;
+
+  document.querySelectorAll(".video-thumb video").forEach(v => {
+    if (v !== video) {
+      v.pause();
+      v.currentTime = 0;
+    }
+  });
+
+  if (video.paused) {
+    video.muted = false;
+    video.play();
+  } else {
+    video.pause();
+  }
+});
 
 
   /* ===========================================================
