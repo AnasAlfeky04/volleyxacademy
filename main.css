@@ -1041,6 +1041,7 @@ html[dir="rtl"] .header-inner {
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
 
 /* CTA بعد حذف الخريطة */
 .cta {
