@@ -969,7 +969,21 @@ html[dir="rtl"] .header-inner {
     object-fit: contain;
   }
 
-  
+  #home-videos > * {
+    display: none;
+  }
+
+  /* خلي أول فيديو بس يظهر */
+  #home-videos > *:first-child {
+    display: block;
+  }
+
+  /* خلي الفيديو بالحجم الطبيعي */
+  #home-videos video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 
   /* CTA */
   .cta {
