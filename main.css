@@ -1024,13 +1024,6 @@ html[dir="rtl"] .header-inner {
   width: 100%;
 }
 
-/* تكبير الصور والفيديو */
-.gallery-grid img,
-.video-thumb video {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
 
 /* CTA بعد حذف الخريطة */
 .cta {
