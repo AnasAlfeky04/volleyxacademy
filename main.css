@@ -1032,6 +1032,16 @@ html[dir="rtl"] .header-inner {
   object-fit: contain;
 }
 
+.video-thumb {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .video-thumb video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
 /* CTA بعد حذف الخريطة */
 .cta {
   grid-template-columns: 1fr !important;
