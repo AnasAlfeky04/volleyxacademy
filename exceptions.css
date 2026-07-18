@@ -45,8 +45,7 @@ html[dir="rtl"] .section-sub {
     border-radius: 12px;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .gallery-grid img {
         width: 100%;
@@ -64,15 +63,25 @@ html[dir="rtl"] .section-sub {
         margin-left: 20px;
     }
 
-    .video-thumb {
-        aspect-ratio: auto;
-        height: auto;
-    }
+}
 
-    .video-thumb video {
+
+@media (max-width: 768px) {
+
+    .gallery-grid img {
         width: 100%;
         height: auto;
         object-fit: contain;
+    }
+
+    .section-sub {
+        margin-left: 35px;
+        margin-right: 20px;
+    }
+
+    html[dir="rtl"] .section-sub {
+        margin-right: 35px;
+        margin-left: 20px;
     }
 
 }

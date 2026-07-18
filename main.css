@@ -799,8 +799,42 @@ html[dir="rtl"] .header-inner {
   }
 
   /* أول صورة بس */
+    #home-photos > * {
+    display: none;
+  }
+
+  /* أول صورة بس */
   #home-photos > *:first-child {
     display: block;
+  }
+
+  #home-photos img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #home-videos > * {
+    display: none;
+  }
+
+  /* خلي أول فيديو بس يظهر */
+  #home-videos > *:first-child {
+    display: block;
+  }
+
+  /* خلي الفيديو بالحجم الطبيعي */
+  #home-videos video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .gallery-grid img,
+  .video-thumb video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -1031,17 +1065,6 @@ html[dir="rtl"] .header-inner {
   height: auto;
   object-fit: contain;
 }
-
-.video-thumb {
-    aspect-ratio: auto;
-    height: auto;
-  }
-
-  .video-thumb video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
 
 /* CTA بعد حذف الخريطة */
 .cta {
