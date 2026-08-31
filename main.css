@@ -728,6 +728,7 @@ html[dir="rtl"] .cta .contact-info {
 
   .site-header,
   .site-header.header-hidden {
+    padding: 0px 0;
     transform: translateY(0) !important;
     opacity: 1 !important;
   }
@@ -869,6 +870,7 @@ html[dir="rtl"] .header-inner {
 
   .site-header,
   .site-header.header-hidden {
+    padding: 0px 0;
     transform: translateY(0) !important;
     opacity: 1 !important;
   }
