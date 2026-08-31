@@ -345,7 +345,7 @@ else {
   });
 
   // تحميل اللغة المحفوظة
-  const savedLang = localStorage.getItem("lang") || "ar";
+  const savedLang = localStorage.getItem("lang") || "en";
   changeLang(savedLang);
 
 });
