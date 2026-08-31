@@ -62,17 +62,28 @@ container.addEventListener("scroll", () => {
 /* --- HEADER HIDE ON SCROLL DOWN / SHOW ON SCROLL UP --- */
 
 const header = document.querySelector(".site-header");
+
+// تأكد إن الهيدر ظاهر أول ما الصفحة تحمل
+header.classList.remove("header-hidden");
+
 let lastScrollTop = container.scrollTop;
 
 container.addEventListener("scroll", () => {
   const currentScroll = container.scrollTop;
 
-  // Scroll Down → إخفاء الهيدر
+  // 📱 Mobile → الهيدر يفضل ظاهر دائمًا
+  if (window.innerWidth <= 768) {
+    header.classList.remove("header-hidden");
+    lastScrollTop = currentScroll;
+    return;
+  }
+
+  // 🖥️ Desktop → Scroll Down → إخفاء الهيدر
   if (currentScroll > lastScrollTop && currentScroll > 80) {
     header.classList.add("header-hidden");
   }
 
-  // Scroll Up → إظهار الهيدر
+  // 🖥️ Desktop → Scroll Up → إظهار الهيدر
   else if (currentScroll < lastScrollTop) {
     header.classList.remove("header-hidden");
   }
