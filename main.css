@@ -732,6 +732,11 @@ html[dir="rtl"] .cta .contact-info {
     opacity: 1 !important;
   }
 
+  .logo {
+    width: 90px;
+    margin-top: 3px;
+  }
+
   .scroll-track {
     display: none !important;
   }
@@ -866,6 +871,11 @@ html[dir="rtl"] .header-inner {
   .site-header.header-hidden {
     transform: translateY(0) !important;
     opacity: 1 !important;
+  }
+
+  .logo {
+    width: 90px;
+    margin-top: 3px;
   }
 
   .scroll-track {
