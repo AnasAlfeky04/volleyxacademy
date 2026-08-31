@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VolleyX Academy — Train Like a Champion</title>
-  <meta name="description" content="VolleyX Academy — professional training for youth and adults. Programs, coaches, schedule, and sign-up." />
+  <title data-en="Haikyuu Academy — Own the Court"
+  data-ar="أكاديمية هايكيو — سيطر على الملعب"
+  data-ja="ハイキューアカデミー — コートを制覇しよう">Haikyuu Academy — Own the Court</title>
+  <meta name="description" content="Haikyuu Academy — professional training for youth and adults. Programs, coaches, schedule, and sign-up." />
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY9J35RDBT"></script>
@@ -17,27 +19,25 @@
 </script>
 
   <link rel="stylesheet" href="main.css" />
-  <link rel="icon" type="image/png" href="/images/X.png">
+  <link rel="icon" type="image/png" href="/images/Haikyuu Academy.png">
 </head>
 <body>
 <div class="scroll-container">
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="VolleyX Academy home">
-        <img class="logo" src="/images/Logo CR.png" alt="">
+      <a href="index.html" class="logo" aria-label="Haikyuu Academy home">
+        <img class="logo" src="/images/Haikyuu Academy.png" alt="">
       </a>
 
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-          <li><a href="#programs" data-en="Programs" data-ar="أنظمة التدريب">Programs</a></li>
-          <li><a href="#coaches" data-en="Coaches" data-ar="المدربون">Coaches</a></li>
-          <li><a href="#schedule" data-en="Schedule" data-ar="المواعيد">Schedule</a></li>
-          <li><a href="#photos" data-en="Photos" data-ar="الصور">Photos</a></li>
-          <li><a href="#videos" data-en="Videos" data-ar="الفيديوهات">Videos</a></li>
-          <li><a href="#opinion" data-en="Opinions" data-ar="الآراء">Opinions</a></li>
-          <li><a href="#pricing" data-en="Pricing" data-ar="الأسعار">Pricing</a></li>
-          <li><a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+          <li><a href="index.html" data-en="HOME" data-ar="الرئيسية" data-ja="ホーム">HOME</a></li>
+          <li><a href="#programs" data-en="PROGRAMS" data-ar="أنظمة التدريب" data-ja="トレーニング">PROGRAMS</a></li>
+          <li><a href="#coaches" data-en="COACHES" data-ar="المدربون" data-ja="コーチ">COACHES</a></li>
+          <li><a href="#schedule" data-en="SCHEDULE" data-ar="المواعيد" data-ja="スケジュール">SCHEDULE</a></li>
+          <li><a href="#photos" data-en="GALLARY" data-ar="المعرض" data-ja="ギャラリー">GALLARY</a></li>
+          <li><a href="#pricing" data-en="PRICING" data-ar="الأسعار" data-ja="料金">PRICING</a></li>
+          <li><a href="#contact" data-en="JOIN US" data-ar="إنضم إلينا" data-ja="参加する">JOIN US</a></li>
         </ul>
       </nav>
 
@@ -52,6 +52,13 @@
         
           <!-- القائمة -->
           <div id="lang-menu" class="lang-menu hidden">
+
+            <!-- English -->
+            <div class="lang-item" onclick="changeLang('en')">
+              <img src="/images/flags/usa.png" class="flag">
+              <span>English</span>
+              <span class="check hidden">✔</span>
+            </div>
           
             <!-- عربي -->
             <div class="lang-item active" onclick="changeLang('ar')">
@@ -59,17 +66,17 @@
               <span>العربية</span>
               <span class="check">✔</span>
             </div>
-          
-            <!-- English -->
-            <div class="lang-item" onclick="changeLang('en')">
-              <img src="/images/flags/usa.png" class="flag">
-              <span>English</span>
-              <span class="check hidden">✔</span>
+            
+            <!-- Japanese -->
+            <div class="lang-item active" onclick="changeLang('ja')">
+              <img src="/images/flags/japan.png" class="flag">
+              <span>日本語</span>
+              <span class="check">✔</span>
             </div>
           </div>
         </div>
 
-        <a href="#contact" class="btn btn-primary" data-en="Join Now" data-ar="إحجز مكانك دلوقتي">Join Now</a>
+        <a href="#contact" class="btn btn-primary" data-en="Join Now" data-ar="إحجز مكانك دلوقتي" data-ja="今すぐ参加する">Join Now</a>
         <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
           <span class="hamburger"></span>
         </button>
@@ -82,28 +89,31 @@
     <section id="home" class="hero" role="region" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1 class="rise" data-en="Train • Rise • Unleash" data-ar="تدرّب • تطوّر • انطلق">
-            Train • Rise • Unleash
+          <h1 class="rise" data-en="RISE UP • OWN THE COURT" data-ar="انهض • سيطر على الملعب" data-ja="立ち上がれ • コートを制覇しろ">
+            RISE UP • OWN THE COURT
           </h1>
           <p class="lead"
-          data-en="VolleyX Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success."
-          data-ar="أكاديمية VolleyX بتقدم تدريب احترافي على أعلى مستوى، ببرامج منظمة تناسب كل الأعمار والمستويات، وطريق واضح يوصّلك للمنافسة والاحتراف.">
-            VolleyX Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success.</p>
+          data-en="Haikyuu Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success."
+          data-ar="أكاديمية هايكيو بتقدم تدريب احترافي على أعلى مستوى، ببرامج منظمة تناسب كل الأعمار والمستويات، وطريق واضح يوصّلك للمنافسة والاحتراف."
+          data-ja="ハイキューアカデミーでは、プロレベルの指導と、年齢やレベルに合わせた体系的なトレーニングプログラムを提供しています。競技での成功を目指すための道を、一緒につくっていきます。">
+            Haikyuu Academy offers pro-level coaching, structured programs for all ages and levels, and a path to competitive success.</p>
           <div class="hero-ctas">
-            <a href="#programs" class="btn btn-secondary" data-en="View Programs" data-ar="عرض برامج التدريب">View Programs</a>
-            <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي">Book a Trial</a>
+            <a href="#programs" class="btn btn-secondary" data-en="View Programs" data-ar="عرض برامج التدريب" data-ja="トレーニングプログラムを見る">View Programs</a>
+            <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي" data-ja="体験レッスンを予約する">Book a Trial</a>
           </div>
           <ul class="hero-features">     
             
             <li>
               <strong 
                 data-en="Dedicated coaches" 
-                data-ar="مدربين متخصصين">
+                data-ar="مدربين متخصصين"
+                data-ja="専門コーチ">
                 Dedicated coaches
               </strong>
               <span 
                 data-en=" for each age group." 
-                data-ar=" لكل فئة عمرية.">
+                data-ar=" لكل فئة عمرية."
+                data-ja=" 年齢層ごとに">
                 for each age group.
               </span>
             </li>
@@ -111,12 +121,14 @@
             <li>
               <strong 
                 data-en="Separated groups" 
-                data-ar="مجموعات منفصلة">
+                data-ar="مجموعات منفصلة"
+                data-ja="別々のグループ">
                 Separated groups
               </strong>
               <span 
                 data-en=" for each gender." 
-                data-ar=" لكل فئة ( شباب / بنات ).">
+                data-ar=" لكل فئة ( شباب / بنات )."
+                data-ja="各カテゴリー（男子／女子）">
                 for each gender.
               </span>
             </li>
@@ -124,12 +136,14 @@
             <li>
               <strong 
                 data-en="Female specialized trainer" 
-                data-ar="مدربة متخصصة">
+                data-ar="مدربة متخصصة"
+                data-ja="女性専門トレーナー">
                 Female specialized trainer
               </strong>
               <span 
                 data-en=" for female groups." 
-                data-ar=" لتدريب البنات.">
+                data-ar=" لتدريب البنات."
+                data-ja="女性グループ向け">
                 for female groups.
               </span>
             </li>
@@ -137,12 +151,14 @@
             <li>
               <strong 
                 data-en="Flexible schedule" 
-                data-ar="مواعيد مرنة">
+                data-ar="مواعيد مرنة"
+                data-ja="柔軟なスケジュール">
                 Flexible schedule
               </strong>
               <span 
                 data-en=" & competitions prep." 
-                data-ar=" وتأهيل للمنافسات.">
+                data-ar=" وتأهيل للمنافسات."
+                data-ja="大会に向けたトレーニング。">
                 & competitions prep.
               </span>
             </li>
@@ -151,7 +167,7 @@
         </div>
         <div class="hero-media" aria-hidden="true">
           <!-- Replace with actual image -->
-          <img src="back.png" alt="Player defending a volleyball" loading="lazy">
+          <img src="/images/Back-Page.png" alt="Shoyo Henata" loading="lazy">
         </div>
       </div>
     </section>
@@ -161,51 +177,61 @@
     <section class="offers-banner">
       <div class="container offers-flex">
         <div class="offer-item">
-          <h3 data-en="👥 Invitations" data-ar="👥 الدعوات">
+          <h3 data-en="👥 Invitations" data-ar="👥 الدعوات" data-ja="👥 招待">
             👥 Invitations
           </h3>
           <p>
             <span 
               data-en="Get " 
-              data-ar="احصل على ">
+              data-ar="احصل على "
+              data-ja="手に入れる">
               Get 
             </span>
             <strong 
               data-en="10% OFF" 
-              data-ar="خصم 10%">
+              data-ar="خصم 10%"
+              data-ja="10%OFF">
               10% OFF
             </strong>
             <span 
               data-en=" for each invitation." 
-              data-ar=" لكل دعوة. ">
+              data-ar=" لكل دعوة. "
+              data-ja="招待1件につき">
               on your 
             </span>
           </p>
         </div>
       
         <div class="offer-item">
-          <h3 data-en="🏅 Friendly Match" data-ar="🏅 مباريات ودية">🏅 Friendly Matchs</h3>
-          <p data-en="One Friday Open Play Session per month." data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+          <h3 data-en="🏐 Friendly Match" data-ar="🏐 مباريات ودية" data-ja="🏐 親善試合">🏐 Friendly Matchs</h3>
+          <p data-en="One Friday Open Play Session per month."
+          data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر."
+          data-ja="月1回、金曜オープンプレー予約">
             One Friday Open Play Session per month.
           </p>
         </div>
       
         <div class="offer-item">
-          <h3 data-en="💥 Trial Discount" data-ar="💥 خصم على الحصة التجربة">💥 Trial Discount</h3>
+          <h3 data-en="🏅 Mens Tuesday Tournament"
+          data-ar="🏅 بطولة يوم الثلاثاء للشباب"
+          data-ja="🏅 男子火曜日大会">🏅 Tuesday Tournament</h3>
           <p>
             <span 
-              data-en="Trial session now for only " 
-              data-ar=" جرّب دلوقتي بسعر">
-              Trial session now for only  
+              data-en="Registration fee " 
+              data-ar=" رسوم الإشتراك"
+              data-ja="参加費">
+              Registration fee 
             </span>
             <strong 
-              data-en="EGP 100" 
-              data-ar="100 جم">
-              EGP 100
+              data-en="EGP 250" 
+              data-ar="٢٥٠ جم"
+              data-ja="250 EGP">
+              EGP 250
             </strong>
             <span 
-              data-en="only." 
-              data-ar=" فقط.">
+              data-en="for player." 
+              data-ar=" لكل لاعب."
+              data-ja="選手1人につき">
               only
             </span>
           </p>
@@ -217,43 +243,51 @@
 
     <!-- PROGRAMS -->
     <section id="programs" class="section programs container" aria-labelledby="programs-title">
-      <h2 id="programs-title" data-en="Programs" data-ar="أنظمة التدريب">Programs</h2>
+      <h2 id="programs-title" data-en="Programs" data-ar="أنظمة التدريب" data-ja="トレーニング">Programs</h2>
       <p class="section-sub"
       data-en="Programs built for progression — from first touch to competitive play."
-      data-ar="برامج مصممة لتطوير مستواك — من أول لمسة لحد الاحتراف والمنافسة">
+      data-ar="برامج مصممة لتطوير مستواك — من أول لمسة لحد الاحتراف والمنافسة"
+      data-ja="成長を目指したプログラム — 初めてボールに触れるところから、競技レベルまで。">
         Programs built for progression — from first touch to competitive play.
       </p>
       <div class="cards-grid">
 
         <article class="card">
-          <h3 data-en="Junior Performance ( 9 - 18 )" data-ar="برنامج الناشئين ( 9 - 18 سنة )">Junior Performance ( 9 - 18 )</h3>
+          <h3 data-en="Junior Performance ( 9 - 18 )"
+          data-ar="برنامج الناشئين ( 9 - 18 سنة )"
+          data-ja="ジュニア・パフォーマンス（9～18歳）"
+          >Junior Performance ( 9 - 18 )</h3>
           <p
           data-en="Technique, game-sense, strength & conditioning, and tournament preparation."
-          data-ar="تطوير المهارات، فهم اللعب، اللياقة البدنية، والاستعداد للبطولات">
+          data-ar="تطوير المهارات، فهم اللعب، اللياقة البدنية، والاستعداد للبطولات"
+          data-ja="スキル向上、ゲーム理解、フィジカル強化、大会への準備">
           Technique, game-sense, strength & conditioning, and tournament preparation.</p>
           <ul>
-            <li data-en="90 - minute sessions" data-ar="90 دقيقة تدريب">90 - minute sessions</li>
-            <li data-en="Advanced techniques" data-ar="تقنيات متطورة">Advanced techniques</li>
+            <li data-en="90 - minute sessions" data-ar="90 دقيقة تدريب" data-ja="90分のトレーニング">90 - minute sessions</li>
+            <li data-en="Advanced techniques" data-ar="تقنيات متطورة" data-ja="高度なテクニック">Advanced techniques</li>
             <li
             data-en="One Friday Open Play Session per month."
-            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر."
+            data-ja="月に一度、金曜日にオープンプレーを予約できます。">
             One Friday Open Play Session per month.
             </li>
           </ul>
         </article>
 
         <article class="card">
-          <h3 data-en="Senior Performance ( +18 )" data-ar="برنامج الكبار ( +18 سنة )">Senior Performance ( +18 )</h3>
+          <h3 data-en="Senior Performance ( +18 )" data-ar="برنامج الكبار ( +18 سنة )" data-ja="シニア・パフォーマンス（18歳以上）">Senior Performance ( +18 )</h3>
           <p
           data-en="Skill sharpening, tactical sessions and league-ready training for senior players."
-          data-ar="تطوير المهارات، تدريبات تكتيكية، وإعداد للمنافسات الرسمية للاعبين الكبار.">
+          data-ar="تطوير المهارات، تدريبات تكتيكية، وإعداد للمنافسات الرسمية للاعبين الكبار."
+          data-ja="スキル向上、戦術トレーニング、シニア選手向けの公式大会への準備。">
           Skill sharpening, tactical sessions and league-ready training for senior players.</p>
           <ul>
-            <li data-en="120 - minute sessions" data-ar="120 دقيقة تدريب">120 - minute sessions</li>
-            <li data-en="Team training sessions" data-ar="تدريبات جماعية كفريق">Team training sessions</li>
+            <li data-en="120 - minute sessions" data-ar="120 دقيقة تدريب" data-ja="120分のトレーニング">120 - minute sessions</li>
+            <li data-en="Team training sessions" data-ar="تدريبات جماعية كفريق" data-ja="チームでのグループトレーニング">Team training sessions</li>
             <li
             data-en="One Friday Open Play Session per month."
-            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر.">
+            data-ar="حجز لعب مفتوح يوم الجمعة مرة كل شهر."
+            data-ja="月に一度、金曜日にオープンプレーを予約できます。">
             One Friday Open Play Session per month.
             </li>
           </ul>
@@ -264,34 +298,38 @@
     <!-- COACHES -->
     <section id="coaches" class="section coaches" aria-labelledby="coaches-title">
       <div class="container">
-        <h2 id="coaches-title" data-en="Coaches" data-ar="المدربون">Coaches</h2>
+        <h2 id="coaches-title" data-en="Coaches" data-ar="المدربون" data-ja="コーチ">Coaches</h2>
         <p class="section-sub"
         data-en="Experienced coaches with competitive and coaching credentials."
-        data-ar="مدربون ذوو خبرة وخلفيات تنافسية وشهادات تدريبية.">
+        data-ar="مدربون ذوو خبرة وخلفيات تنافسية وشهادات تدريبية."
+        data-ja="競技経験と指導実績を持つ経験豊富なコーチ陣。">
         Experienced coaches with competitive and coaching credentials.
         </p>
         <div class="coaches-grid">
           <figure class="coach">
-            <img src="/images/Coaches/avatar.png" alt="Coach Ahmed — Head Coach" loading="lazy">
+            <img src="/images/Coaches/avatar.png" alt="Coach Anas — Head Coach" loading="lazy">
             <figcaption>
-              <h3 data-en="Coach Anas" data-ar="كابتن أنس">Coach Anas</h3>
-              <p data-en="Head Coach — Academy Founder." data-ar="المدير الفني — مؤسس الأكاديمية.">Head Coach — Academy Founder.</p>
-            </figcaption>
-          </figure>
-
-          <figure class="coach">
-            <img src="/images/Coaches/avatar.png" alt="Coach Fouad" loading="lazy">
-            <figcaption>
-              <h3 data-en="Coach Fouad" data-ar="كابتن فؤاد">Coach Fouad</h3>
-              <p data-en="Coach — Junior Coach." data-ar="مدرب — مدرب الناشئين.">Coach — Junior Coach.</p>
+              <h3 data-en="Coach Anas" data-ar="كابتن أنس" data-ja="アナス   コーチ">Coach Anas</h3>
+              <p data-en="Head Coach — Academy Founder."
+              data-ar="المدير الفني — مؤسس الأكاديمية."
+              data-ja="ヘッドコーチ — アカデミー創設者">
+              Head Coach — Academy Founder.</p>
             </figcaption>
           </figure>
 
           <figure class="coach">
             <img src="/images/Coaches/avatar.png" alt="Coach Ahmed" loading="lazy">
             <figcaption>
-              <h3 data-en="Coach Ahmed" data-ar="كابتن أحمد">Coach Ahmed</h3>
-              <p data-en="Coach — Senior Coach." data-ar="مدرب — مدرب فريق الكبار.">Coach — Senior Coach.</p>
+              <h3 data-en="Coach Ahmed" data-ar="كابتن أحمد" data-ja="アハメドコーチ">Coach Ahmed</h3>
+              <p data-en="Coach — Senior Coach." data-ar="مدرب — مدرب فريق الكبار." data-ja="コーチ — シニアコーチ">Coach — Senior Coach.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="coach">
+            <img src="/images/Coaches/avatar.png" alt="Coach Mohamed" loading="lazy">
+            <figcaption>
+              <h3 data-en="Coach Mohamed" data-ar="كابتن محمد" data-ja="モハメドコーチ">Coach Mohamed</h3>
+              <p data-en="Coach — Junior Coach." data-ar="مدرب — مدرب الناشئين." data-ja="コーチ — ジュニアコーチ">Coach — Junior Coach.</p>
             </figcaption>
           </figure>
         </div>
@@ -301,16 +339,18 @@
     <!-- SCHEDULE -->
     <section id="schedule" class="section schedule" aria-labelledby="schedule-title">
       <div class="container">
-        <h2 id="schedule-title" data-en="Weekly Schedule" data-ar="المواعيد الإسبوعية">Weekly Schedule</h2>
+        <h2 id="schedule-title" data-en="Weekly Schedule" data-ar="المواعيد الإسبوعية" data-ja="週間スケジュール">Weekly Schedule</h2>
         <p class="section-sub"
         data-en="Choose your level and see available sessions."
-        data-ar="اختر مستواك واطّلع على المواعيد المتاحة.">
+        data-ar="اختر مستواك واطّلع على المواعيد المتاحة."
+        data-ja="レベルを選択して、利用可能なセッションを確認してください。">
         Choose your level and see available sessions.
         </p>
 
         <div class="schedule-controls" role="tablist" aria-label="Program schedule">
-          <button class="tab-btn active" data-target="junior" role="tab" aria-selected="true" data-en="Junior" data-ar="مبتدئ">Junior</button>
-          <button class="tab-btn" data-target="youth" role="tab" aria-selected="false" data-en="Senior" data-ar="كبار">Senior</button>
+          <button class="tab-btn active" data-target="junior" role="tab" aria-selected="true" data-en="Junior" data-ar="مبتدئ" data-ja="ジュニア">Junior</button>
+          <button class="tab-btn" data-target="youth" role="tab" aria-selected="false" data-en="Senior" data-ar="كبار" data-ja="シニア">Senior</button>
+          <button class="tab-btn" data-target="tournament" role="tab" aria-selected="false" data-en="Tournament" data-ar="بطولة" data-ja="大会">Tournament</button>
         </div>
 
         <div class="schedule-panels">
@@ -319,12 +359,14 @@
               <li>
                 <strong 
                   data-en="Mon" 
-                  data-ar="الإثنين">
+                  data-ar="الإثنين"
+                  data-ja="月曜日">
                   Mon
                 </strong>
                 <span 
                   data-en=" — 07:00 PM - 09:00 PM" 
-                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً"
+                  data-ja=" — 19:00 - 21:00">
                   — 07:00 PM - 09:00 PM
                 </span>
               </li>
@@ -332,12 +374,14 @@
               <li>
                 <strong 
                   data-en="Thur" 
-                  data-ar="الخميس">
+                  data-ar="الخميس"
+                  data-ja="木曜日">
                   Thur
                 </strong>
                 <span 
                   data-en=" — 07:00 PM - 09:00 PM" 
-                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً"
+                  data-ja=" — 19:00 - 21:00">
                   — 07:00 PM - 09:00 PM
                 </span>
               </li>
@@ -345,12 +389,14 @@
               <li>
                 <strong 
                   data-en="Fri" 
-                  data-ar="الجمعة">
+                  data-ar="الجمعة"
+                  data-ja="金曜日">
                   Fri
                 </strong>
                 <span 
                   data-en=" — 06:00 PM - 08:00 PM — Open Play Session" 
-                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح">
+                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح"
+                  data-ja=" — 18:00 - 20:00 — オープンプレーセッション">
                   — 06:00 PM - 08:00 PM — Open Play Session
                 </span>
               </li>
@@ -362,12 +408,14 @@
               <li>
                 <strong 
                   data-en="Sun" 
-                  data-ar="الأحد">
+                  data-ar="الأحد"
+                  data-ja="日曜日">
                   Sun
                 </strong>
                 <span 
                   data-en=" — 07:00 PM - 09:00 PM" 
-                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً"
+                  data-ja=" — 19:00 - 21:00">
                   — 07:00 PM - 09:00 PM
                 </span>
               </li>
@@ -375,12 +423,14 @@
               <li>
                 <strong 
                   data-en="Wed" 
-                  data-ar="الأربعاء">
+                  data-ar="الأربعاء"
+                  data-ja="水曜日">
                   Wed
                 </strong>
                 <span 
                   data-en=" — 07:00 PM - 09:00 PM" 
-                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً">
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً"
+                  data-ja=" — 19:00 - 21:00">
                   — 07:00 PM - 09:00 PM
                 </span>
               </li>
@@ -388,13 +438,34 @@
               <li>
                 <strong 
                   data-en="Fri" 
-                  data-ar="الجمعة">
+                  data-ar="الجمعة"
+                  data-ja="金曜日">
                   Fri
                 </strong>
                 <span 
                   data-en=" — 06:00 PM - 08:00 PM — Open Play Session" 
-                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح">
+                  data-ar=" — 06:00 مساءً إلى 08:00 مساءً — حجز لعب مفتوح"
+                  data-ja=" — 18:00 - 20:00 — オープンプレーセッション">
                   — 06:00 PM - 08:00 PM — Open Play Session
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="tournament" class="panel hidden">
+            <ul>
+              <li>
+                <strong 
+                  data-en="Tue" 
+                  data-ar="الثلاثاء"
+                  data-ja="火曜日">
+                  Sun
+                </strong>
+                <span 
+                  data-en=" — 07:00 PM - 09:00 PM" 
+                  data-ar=" — 07:00 مساءً إلى 09:00 مساءً"
+                  data-ja=" — 19:00 - 21:00">
+                  — 09:00 PM - 11:00 PM
                 </span>
               </li>
             </ul>
@@ -402,8 +473,8 @@
         </div>
 
         <div class="schedule-cta">
-          <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي">Book a Trial</a>
-          <a href="#pricing" class="btn btn-secondary" data-en="View Pricing" data-ar="عرض الأسعار">View Pricing</a>
+          <a href="#contact" class="btn btn-primary" data-en="Book a Trial" data-ar="احجز تجربتك دلوقتي" data-ja="今すぐ体験を予約">Book a Trial</a>
+          <a href="#pricing" class="btn btn-secondary" data-en="View Pricing" data-ar="عرض الأسعار" data-ja="料金を見る">View Pricing</a>
         </div>
       </div>
     </section>
@@ -411,14 +482,18 @@
     <!-- PHOTOS -->
     <section id="photos" class="section gallery container" aria-labelledby="photos-title">
       <div class="gallery-header">
-        <h2 id="photos-title" data-en="Photos" data-ar="الصور">Photos</h2>
+        <h2 id="photos-title" data-en="Photos" data-ar="الصور" data-ja="写真集">Photos</h2>
         <a href="photos.html" class="see-all" 
         data-en="See All" 
-        data-ar="عرض الكل">
+        data-ar="عرض الكل"
+        data-ja="すべて見る">
         See All
         </a>
       </div>
-      <p class="section-sub" data-en="Moments from training and matches." data-ar="لقطات من التدريبات والمباريات.">Moments from training and matches.</p>
+      <p class="section-sub" data-en="Moments from training and matches."
+      data-ar="لقطات من التدريبات والمباريات."
+      data-ja="トレーニングや試合の様子。">
+      Moments from training and matches.</p>
       <div class="gallery-grid" id="home-photos"></div>
     </section>
 
@@ -426,93 +501,70 @@
     <!-- VIDEOS -->
     <section id="videos" class="section gallery container" aria-labelledby="videos-title">
       <div class="gallery-header">
-      <h2 id="videos-title" data-en="Videos" data-ar="الفيديوهات">Videos</h2>
+      <h2 id="videos-title" data-en="Videos" data-ar="الفيديوهات" data-ja="ビデオ">Videos</h2>
         <a href="videos.html" class="see-all" 
         data-en="See All" 
-        data-ar="عرض الكل">
+        data-ar="عرض الكل"
+        data-ja="すべて見る">
         See All
         </a>
       </div>
-      <p class="section-sub" data-en="Moments from training and matches." data-ar="لقطات من التدريبات والمباريات.">Moments from training and matches.</p>
+      <p class="section-sub" data-en="Moments from training and matches."
+      data-ar="لقطات من التدريبات والمباريات."
+      data-ja="トレーニングや試合の様子。">
+        Moments from training and matches.</p>
       <div class="gallery-grid" id="home-videos"></div>
     </section>
 
 
-    <!-- TESTIMONIALS -->
-    <section id="opinion" class="section testimonials" aria-labelledby="testimonials-title">
-      <div class="container">
-        <h2 id="testimonials-title"
-        data-en="What parents & players say"
-        data-ar="آراء اللاعبين وأولياء الأمور">
-        What parents & players say
-        </h2>
-        <div class="testimonial-grid">
-          <blockquote class="blockquote">
-            <p
-            data-en="Coach Fouad transformed my son's technique in 1 month."
-            data-ar="كابتن فؤاد طور مهارات ابني بشكل ملحوظ جدا خلال شهر واحد فقط.">
-            Coach Fouad transformed my son's technique in 1 month.
-            </p>
-            <footer class="talker" data-en="Fatma, parent" data-ar="فاطمة، وليّة أمر">Fatma, parent</footer>
-          </blockquote>
-
-          <blockquote class="blockquote">
-            <p
-            data-en="Great facility and structured sessions. I have improved my defending and serving control."
-            data-ar="ملاعب مميزة وتدريبات منظمة. طوّرت مستواي في الإستقبال والتحكم في الإرسال.">
-            "Great facility and structured sessions. I have improved my defending and serving control."
-            </p>
-            <footer class="talker" data-en="Omar, player" data-ar="عمر، لاعب">Omar, player</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
     <!-- PRICING -->
     <section id="pricing" class="section pricing container" aria-labelledby="pricing-title">
-      <h2 id="pricing-title" data-en="Pricing" data-ar="الأسعار">Pricing</h2>
-      <p class="section-sub" data-en="Simple and transparent pricing." data-ar="أسعار بسيطة وواضحة">Simple and transparent pricing.</p>
+      <h2 id="pricing-title" data-en="Pricing" data-ar="الأسعار" data-ja="料金">Pricing</h2>
+      <p class="section-sub" data-en="Simple and transparent pricing."
+      data-ar="أسعار بسيطة وواضحة"
+      data-ja="シンプルで分かりやすい料金設定。">
+      Simple and transparent pricing.</p>
       <div class="pricing-grid">
         <div class="price-card recommended">
-          <h3 data-en="Trial Session" data-ar="تمرينة تجريبية">Trial Session</h3>
+          <h3 data-en="Trial Session" data-ar="تمرينة تجريبية" data-ja="体験トレーニング">Trial Session</h3>
           <p class="price">
-            <span class="new-price" data-en="EGP 100" data-ar="100 جم">EGP 100</span>
-            <!-- <span class="old-price">EGP 125</span> -->
+            <span class="new-price" data-en="EGP 100 / Session" data-ar="١٠٠ جم / التمرينة" data-ja="1回 100 EGP">EGP 100</span>
           </p>
           <p
           data-en="One trial training to assess level and fit."
-          data-ar="تمرينة تجريبية واحدة لتقييم المستوى">
+          data-ar="تمرينة تجريبية واحدة لتقييم المستوى"
+          data-ja="レベルと適性を確認するためのトライアルトレーニング1回。">
           One trial training to assess level and fit.
           </p>
-          <a class="btn btn-primary" href="#contact" data-en="Book Trial" data-ar="احجز تجربتك دلوقتي">Book Trial</a>
+          <a class="btn btn-primary" href="#contact" data-en="Book Trial" data-ar="احجز تجربتك دلوقتي" data-ja="体験を予約">Book Trial</a>
         </div>
 
         <div class="price-card recommended">
-          <h3 data-en="Monthly Plan" data-ar="الإشتراك الشهري">Monthly Plan</h3>
+          <h3 data-en="Monthly Plan" data-ar="الإشتراك الشهري" data-ja="月額プラン">Monthly Plan</h3>
           <p class="price">
-            <span class="new-price" data-en="EGP 800 / month" data-ar="800 جم / شهر">EGP 800 / month</span>
-            <!-- <span class="old-price">EGP 1000</span> -->
+            <span class="new-price" data-en="EGP 750 / Month" data-ar="٧٥٠ جم / شهر" data-ja="月額 750 EGP">EGP 750 / month</span>
           </p>
           <p
           data-en="2 sessions per week + Open Play Session"
-          data-ar="2 تمرينة خلال الإسبوع + حجز لعب مفتوح">
+          data-ar="2 تمرينة خلال الإسبوع + حجز لعب مفتوح"
+          data-ja="週2回のトレーニング＋オープンプレー予約">
           2 sessions per week + Free game.
           </p>
-          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا">Sign Up</a>
+          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا" data-ja="登録はこちら">Sign Up</a>
         </div>
 
         <div class="price-card recommended">
-          <h3 data-en="Yearly Plan" data-ar="الإشتراك السنوي">Yearly Plan</h3>
+          <h3 data-en="Tournament" data-ar="البطولة" data-ja="大会">Tournament</h3>
           <p class="price">
-            <span class="new-price" data-en="EGP 8500 / year" data-ar="8500 جم / سنة">EGP 8500 / year</span>
-            <span class="old-price" data-en="EGP 9600" data-ar="9600 جم">EGP 9600</span>
+            <span class="new-price" data-en="EGP 250 / Player" data-ar=" ٢٥٠ جم / للاعب" data-ja="1選手 250 EGP">EGP 250 / Player</span>
           </p>
           <p
-          data-en="2 sessions per week + Open Play Session"
-          data-ar="2 تمرينة خلال الإسبوع + حجز لعب مفتوح">
-          2 sessions per week + Free game.
+          data-en="Register now with your team."
+          data-ar="إشترك الان مع فريقك."
+          data-ja="チームで今すぐ登録する">
+          Register now with your team.
           </p>
-          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا">Sign Up</a>
+          <a class="btn btn-primary" href="#contact" data-en="Sign Up" data-ar="اشترك معنا" data-ja="購読する">Sign Up</a>
         </div>
       </div>
     </section>
@@ -520,9 +572,20 @@
     <!-- CONTACT -->
     <section id="contact" class="cta">
       <div class="contact-info">
-        <h2 data-en="Ready to Start Your Journey with us?" data-ar="هل أنت مستعد لبدء رحلتك معنا؟">Ready to Start Your Journey?</h2>
-        <p data-en="Message us now to reserve your spot." data-ar="ابعتلنا دلوقتي لحجز مكانك.">Message us now to reserve your spot.</p>
-        <a href="https://wa.me/+201147145691" target="_blank" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
+        <h2 data-en="Ready to Start Your Journey with us?"
+        data-ar="هل أنت مستعد لبدء رحلتك معنا؟"
+        data-ja="旅を始める準備はできましたか？">
+        Ready to Start Your Journey?</h2>
+
+        <p data-en="Message us now to reserve your spot."
+        data-ar="ابعتلنا دلوقتي لحجز مكانك."
+        data-ja="今すぐご連絡いただき、席を予約してください。">
+        Message us now to reserve your spot.</p>
+
+        <a href="https://wa.me/+201147145691" target="_blank" data-en="Contact Us"
+        data-ar="تواصل معنا"
+        data-ja="今すぐお問い合わせください">
+        Contact Us</a>
       </div>
 
       <div class="contact-location">
@@ -537,23 +600,24 @@
 
 <footer class="site-footer">
   <div class="footer-col center">
-    <a href="#home" class="footer-logo" aria-label="VolleyX Academy home">
-      <img class="logo" src="/images/Logo CR.png" alt="">
+    <a href="#home" class="footer-logo" aria-label="Haikyuu Academy home">
+      <img class="logo" src="/images/Haikyuu Academy.png" alt="">
     </a>
   </div>
 
   <div class="footer-col center">
     <p>© <span id="year"></span>
-      <span data-en="VolleyX Academy. All rights reserved."
-        data-ar="أكاديمية VolleyX. جميع الحقوق محفوظة.">
-        VolleyX Academy. All rights reserved.
+      <span data-en="Haikyuu Academy. All rights reserved."
+        data-ar="أكاديمية هايكيو. جميع الحقوق محفوظة."
+        data-ja="ハイキューアカデミー。無断転載を禁じます。">
+        Haikyuu Academy. All rights reserved.
       </span>
     </p>
   </div>
 
   <div class="footer-col center">
     <div class="social-icons">
-      <a href="https://www.facebook.com/volleyxacademy4" target="_blank" class="social-item">
+      <a href="https://www.facebook.com/haikyuuacademy" target="_blank" class="social-item">
           <img src="/images/Social/facebook.png" alt="Facebook">
           <span>Facebook</span>
       </a>
@@ -561,11 +625,11 @@
           <img src="/images/Social/whatsapp.png" alt="Whatsapp">
           <span>Whatsapp</span>
       </a>
-      <a href="https://www.instagram.com/volleyx_academy/" target="_blank" class="social-item">
+      <a href="https://www.instagram.com/haikyuuacademy" target="_blank" class="social-item">
           <img src="/images/Social/instagram.png" alt="Instagram">
           <span>Instagram</span>
       </a>
-      <a href="https://www.youtube.com/@VolleyXAcademy" target="_blank" class="social-item">
+      <a href="https://www.youtube.com/@haikyuuacademy" target="_blank" class="social-item">
           <img src="/images/Social/youtube.png" alt="YouTube">
           <span>YouTube</span>
       </a>

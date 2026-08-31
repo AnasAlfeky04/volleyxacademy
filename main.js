@@ -59,6 +59,32 @@ container.addEventListener("scroll", () => {
   ball.style.top = ballY + "px";
 });
 
+/* --- HEADER HIDE ON SCROLL DOWN / SHOW ON SCROLL UP --- */
+
+const header = document.querySelector(".site-header");
+let lastScrollTop = container.scrollTop;
+
+container.addEventListener("scroll", () => {
+  const currentScroll = container.scrollTop;
+
+  // Scroll Down → إخفاء الهيدر
+  if (currentScroll > lastScrollTop && currentScroll > 80) {
+    header.classList.add("header-hidden");
+  }
+
+  // Scroll Up → إظهار الهيدر
+  else if (currentScroll < lastScrollTop) {
+    header.classList.remove("header-hidden");
+  }
+
+  // لو رجعنا لأعلى الصفحة
+  if (currentScroll <= 10) {
+    header.classList.remove("header-hidden");
+  }
+
+  lastScrollTop = currentScroll;
+});
+
 fetch('photos.html')
   .then(res => res.text())
   .then(html => {
@@ -247,11 +273,20 @@ document.addEventListener("click", (e) => {
   window.changeLang = function (lang) {
 
     // 🔥 ترجمة النصوص
-    document.querySelectorAll("[data-en]").forEach(el => {
-      el.innerText = (lang === "ar")
-        ? el.getAttribute("data-ar")
-        : el.getAttribute("data-en");
-    });
+document.querySelectorAll("[data-en]").forEach(el => {
+
+  if (lang === "ar") {
+    el.innerText = el.getAttribute("data-ar");
+  } 
+  else if (lang === "ja") {
+    el.innerText = el.getAttribute("data-ja");
+  } 
+  else {
+    el.innerText = el.getAttribute("data-en");
+  }
+
+});
+
 
     // علامة الصح
     document.querySelectorAll(".lang-item").forEach(item => {
@@ -267,15 +302,27 @@ document.addEventListener("click", (e) => {
     const flag = document.querySelector(".lang-btn img");
     const text = document.querySelector(".lang-btn span");
 
-    if (lang === "ar") {
-      flag.src = "/images/flags/egypt.png";
-      text.innerText = "EG";
-      document.documentElement.dir = "rtl"; // 🔥 اتجاه عربي
-    } else {
-      flag.src = "/images/flags/usa.png";
-      text.innerText = "EN";
-      document.documentElement.dir = "ltr";
-    }
+if (lang === "ar") {
+
+  flag.src = "/images/flags/egypt.png";
+  text.innerText = "EG";
+  document.documentElement.dir = "rtl";
+
+} 
+else if (lang === "ja") {
+
+  flag.src = "/images/flags/japan.png";
+  text.innerText = "JP";
+  document.documentElement.dir = "ltr";
+
+} 
+else {
+
+  flag.src = "/images/flags/usa.png";
+  text.innerText = "EN";
+  document.documentElement.dir = "ltr";
+
+}
 
     // قفل القائمة
     document.getElementById("lang-menu").classList.add("hidden");
