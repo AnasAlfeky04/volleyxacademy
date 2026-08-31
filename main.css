@@ -958,6 +958,7 @@ html[dir="rtl"] .header-inner {
 
   .logo {
     width: 90px;
+    margin-top: 3px;
   }
 
   .hero-content h1 {
