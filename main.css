@@ -726,6 +726,12 @@ html[dir="rtl"] .cta .contact-info {
 ======================================== */
 @media (max-width: 1024px) {
 
+  .site-header,
+  .site-header.header-hidden {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+
   .scroll-track {
     display: none !important;
   }
@@ -855,6 +861,12 @@ html[dir="rtl"] .header-inner {
    📱 MOBILE (<=768px)
 ======================================== */
 @media (max-width: 768px) {
+
+  .site-header,
+  .site-header.header-hidden {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
 
   .scroll-track {
     display: none !important;
