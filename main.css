@@ -873,6 +873,7 @@ html[dir="rtl"] .header-inner {
     padding: 19px 0;
     transform: translateY(0) !important;
     opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .scroll-track {

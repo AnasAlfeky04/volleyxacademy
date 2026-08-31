@@ -63,7 +63,7 @@ container.addEventListener("scroll", () => {
 
 const header = document.querySelector(".site-header");
 
-// تأكد إن الهيدر ظاهر أول ما الصفحة تحمل
+// إظهار الهيدر فورًا عند تحميل الموقع
 header.classList.remove("header-hidden");
 
 let lastScrollTop = container.scrollTop;
