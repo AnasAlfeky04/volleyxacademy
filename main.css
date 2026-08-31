@@ -873,11 +873,6 @@ html[dir="rtl"] .header-inner {
     opacity: 1 !important;
   }
 
-  .logo {
-    width: 90px;
-    margin-top: 3px;
-  }
-
   .scroll-track {
     display: none !important;
   }
@@ -962,7 +957,7 @@ html[dir="rtl"] .header-inner {
   }
 
   .logo {
-    width: 110px;
+    width: 90px;
   }
 
   .hero-content h1 {
